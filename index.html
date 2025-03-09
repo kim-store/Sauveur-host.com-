@@ -1,0 +1,151 @@
+<html lang="id">
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>SAUVEUR STORE</title> 
+  <link href="ui.jpg" rel="icon"> 
+  <meta content="SAUVER-HOST"> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css"> 
+  <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+        }
+        .header {
+            background: #007bff;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: 600;
+            position: relative;
+        }
+        .menu {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .nav-menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 10px;
+            width: 150px;
+        }
+        .nav-menu a {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+        .nav-menu a i {
+            margin-right: 10px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        .row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 15px;
+            width: 45%;
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 10px;
+        }
+        .description {
+            display: none;
+            margin-top: 10px;
+        }
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+    </style> 
+  <script>
+        function toggleDescription(id) {
+            var desc = document.getElementById(id);
+            desc.style.display = desc.style.display === 'none' ? 'block' : 'none';
+        }
+        function buyProduct(name) {
+            var url = `https://wa.me/6287847437754?text=${name}`;
+            window.location.href = url;
+        }
+        function toggleMenu() {
+            var menu = document.getElementById("nav-menu");
+            menu.style.display = menu.style.display === "none" ? "block" : "none";
+        }
+    </script> 
+ </head> 
+ <body> 
+  <div class="header">
+    SAUVEUR STORE
+   <div class="menu" onclick="toggleMenu()">
+    ⋮
+   </div> 
+   <div class="nav-menu" id="nav-menu"> 
+    <a href="https://whatsapp.com/channel/0029Vb3yAPoB4hdTQyMbAv3e"><i class="bx bxl-whatsapp"></i> Channel</a> 
+    <a href="https://whatsapp.com/channel/0029Vb3yAPoB4hdTQyMbAv3e"><i class="bx bx-chat"></i> Testimoni</a> 
+    <a href="https://wa.me/6287847437754"><i class="bx bx-user-pin"></i> Owner</a> 
+   </div> 
+  </div> 
+  <div class="container"> 
+   <div class="row"> 
+    <div class="product" onclick="toggleDescription('desc1')"> 
+     <img src="https://img12.pixhost.to/images/809/574562879_skyzopedia.jpg" alt="GALERI X RAT"> 
+     <h3>JASTEB×UNCEK</h3> 
+     <p>Rp 2.000 - 50.000</p> 
+     <p class="description" id="desc1">JASTEB×UNCEK.</p> 
+     <button onclick="buyProduct('BANG MAU BUY JASTEB ATAU UNCEK)">Beli Sekarang</button> 
+    </div> 
+    <div class="product" onclick="toggleDescription('desc2')"> 
+     <img src="https://img12.pixhost.to/images/809/574564815_skyzopedia.jpg" alt="TELEGRAM X RAT"> 
+     <h3>PT PANEL JASTEB</h3> 
+     <p>Rp 1.000 - 70.000</p> 
+     <p class="description" id="desc2">UNCHEK</p> 
+     <button onclick="buyProduct('BANG MAU BELI PT PANEL JASTEB')">Beli Sekarang</button> 
+    </div> 
+   </div> 
+   <div class="row"> 
+    <div class="product" onclick="toggleDescription('desc3')"> 
+     <img src="https://img12.pixhost.to/images/809/574562824_skyzopedia.jpg" alt="SMS X RAT"> 
+     <h3>MARGA JASTEB</h3> 
+     <p>Rp 85.000</p> 
+     <p class="description" id="desc3">LOGO</p> 
+     <button onclick="buyProduct('BANG MAU BELI MARGA JASTEB')">Beli Sekarang</button> 
+    </div> 
+
+   </div> 
+  </div> 
+ </body>
+</html>
